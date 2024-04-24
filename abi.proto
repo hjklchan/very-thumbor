@@ -2,6 +2,10 @@ syntax = "proto3";
 
 package abi;
 
+message ImageSpec {
+    repeated Spec specs = 1;
+}
+
 // 处理图片尺寸
 message Resize {
     uint32 width = 1;
@@ -66,7 +70,7 @@ message Spec {
         Resize resize = 1;
         Crop crop = 2;
         Flipv flipv = 3;
-        Fliph = 4;
+        Fliph fliph = 4;
         Contrast contrast = 5;
         Filter filter = 6;
         Watermark watermark = 7;
